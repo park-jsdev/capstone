@@ -36,11 +36,10 @@ def test_average_resolution_time_per_month(test_data, output_data):
     test_data[START_DATE_COL] = pd.to_datetime(test_data[START_DATE_COL])
     test_data[END_DATE_COL] = pd.to_datetime(test_data[END_DATE_COL])
     
-    # Drop missing values from the test data
-    test_data = test_data.dropna(subset=[START_DATE_COL, END_DATE_COL])
+    # Add Days Difference column to the original DataFrame
+    test_data.loc[test_data[START_DATE_COL].notnull() & test_data[END_DATE_COL].notnull(), 'Days Difference'] = (test_data[END_DATE_COL] - test_data[START_DATE_COL]).dt.days
     
     # Calculate days difference and group by month
-    test_data['Days Difference'] = (test_data[END_DATE_COL] - test_data[START_DATE_COL]).dt.days
     grouped = test_data.groupby(test_data[START_DATE_COL].dt.month)['Days Difference']
 
     # Calculate actual average for each month

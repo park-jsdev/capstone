@@ -32,7 +32,7 @@ def output_data():
 
 def test_average_resolution_time_total(test_data, output_data):
     # Drop missing values from the test data
-    test_data_clean = test_data.dropna(subset=[START_DATE_COL, END_DATE_COL])
+    test_data_clean = test_data.dropna(subset=[START_DATE_COL, END_DATE_COL]).copy()
     
     # Calculate days difference and average resolution time for non-missing values
     days_diff = (pd.to_datetime(test_data_clean[END_DATE_COL]) - pd.to_datetime(test_data_clean[START_DATE_COL])).dt.days
