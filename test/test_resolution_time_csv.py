@@ -1,13 +1,15 @@
-import pandas as pd
-import pytest
-
 # Pytest combines setup, execute, and teardown with fixtures.
 # Usage: Export the test data csv file and the output data csv file from Power BI,
+#        Define the file names in the constants in the test,
 #        python -m pytest test_resolution_time_csv.py --test_data_file=<path_to_test_data_file> --output_data_file=<path_to_output_data_file>
 #        Replace <path_to_test_data_file> and <path_to_output_data_file> with the paths to the test data and output data csv file.
 
 import pandas as pd
 import pytest
+
+# Define the file names as variables
+TEST_DATA_FILE = 'test_data.csv'
+OUTPUT_DATA_FILE = 'output_data.csv'
 
 # Define the column names as variables
 START_DATE_COL = 'Start Date'
@@ -18,13 +20,13 @@ EXPECTED_AVG_COL = 'Expected Avg'
 
 # Fixture to load the test data csv file
 @pytest.fixture
-def test_data(test_data_file):
-    return pd.read_csv(test_data_file)
+def test_data():
+    return pd.read_csv(TEST_DATA_FILE)
 
 # Fixture to load the output data csv file
 @pytest.fixture
-def output_data(output_data_file):
-    return pd.read_csv(output_data_file)
+def output_data():
+    return pd.read_csv(OUTPUT_DATA_FILE)
 
 # test the output's average resolution time vs the actual resolution time from the test data
 def test_average_resolution_time_total(test_data, output_data):
