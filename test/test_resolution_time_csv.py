@@ -3,8 +3,14 @@ import pytest
 
 # Pytest combines setup, execute, and teardown with fixtures.
 # Usage: Export the test data csv file and the output data csv file from Power BI,
-#        pytest --test_data_file=<path_to_test_data_file> --output_data_file=<path_to_output_data_file>
+#        python -m pytest test_resolution_time_csv.py --test_data_file=<path_to_test_data_file> --output_data_file=<path_to_output_data_file>
 #        Replace <path_to_test_data_file> and <path_to_output_data_file> with the paths to the test data and output data csv file.
+
+# Constants for column names
+START_DATE_COL = 'Start Date'
+END_DATE_COL = 'End Date'
+EXPECTED_AVG_COL = 'Expected Avg'
+MONTHS_COL = 'Months'
 
 # Fixture to load the test data csv file
 @pytest.fixture
