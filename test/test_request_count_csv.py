@@ -19,6 +19,9 @@ REL_TOL = 1e-2
 TEST_DATA_FILE = 'test_data.csv'
 OUTPUT_DATA_FILE = 'output_data.csv'
 
+# Define the column names as variables
+EXPECTED_TOTAL_ROWS = 'Expected Count'
+
 # Fixture to load the test data csv file
 @pytest.fixture
 def test_data():
@@ -42,6 +45,6 @@ def test_total_rows(test_data, output_data):
     output_data = pd.read_csv(OUTPUT_DATA_FILE)
 
     # Check if the number of rows in the test data matches the number of rows in the output data
-    expected_rows_count = len(test_data)
-    actual_rows_count = len(output_data)
-    assert actual_rows_count == expected_rows_count, f"Error: Row count does not match. Expected: {expected_rows_count}, Actual: {actual_rows_count}."
+    expected_total_rows = output_data[EXPECTED_TOTAL_ROWS].iloc[0]
+    actual_rows_count = len(test_data)
+    assert actual_rows_count == expected_total_rows, f"Error: Row count does not match. Expected: {expected_total_rows}, Actual: {actual_rows_count}."
