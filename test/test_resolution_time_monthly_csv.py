@@ -3,6 +3,7 @@
 #        Define the file names in the constants in the test,
 #        python -m pytest test_resolution_time_monthly_csv.py, or
 #        python -m pytest to run all tests
+#        `python -m pytest -vv test_resolution_time_monthly_csv.py` for descriptions of failing rows.
 
 import pandas as pd
 import pytest
