@@ -2,7 +2,7 @@
 # HR Data Requests Analysis Dashboard
 A Business intelligence dashboard on the Microsoft Power BI platform.
 
-![](report.pdf)
+![](report-1.png)
 
 ## Description
 As part of a departmental action within the ECCC Performance Management branch, there is a need to analyze data requests which are submitted and processed by the department, for the purpose of business intelligence. Its main purpose is executive reporting for the fiscal year, but has use cases for multiple levels of users. In this use case, the dashboard accurately aggregated the KPIs in a single page, and was able to demonstrate evidence for the benefit of automated work process for departmental productivity, and laid a groundwork for further studies for risk assessment. 
@@ -131,7 +131,7 @@ Example - Say that we are interested in Ad Hoc requests and want to get the inci
 ![](adhocselection.png)
 
 If we are a manager, we may be interested in the assigned user, and if we are an operational user, we may be interested in the client’s name.
-![](inkedadhocadhocquery.jpg)
+![](inkedadhocadhocquery.png)
 
 Exporting csv files produced by visuals for further analysis:
 1. Ensure that the data is loaded, refreshed.
@@ -147,7 +147,7 @@ Setting up dynamic refresh or embedding to web
 2. Set a schedule for automatic refresh, or manually refresh the data as desired.
 3. Get the export code.
 
-![](Inkedembedcode.jpg)
+![](Inkedembedcode.png)
 
 ## Testing
 pytest unit tests have been included to test key data visuals and manipulations which most other visuals are derived from. The testing method was to compare the output data from each visual with the base dataset. To test, collect the dashboard's dataset (.csv) and the output data (.csv) from the visual you wish to test, tweak the constant names of the test to match the columns you wish to test, then run either the individual test, or all the tests in the folder with:
