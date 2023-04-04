@@ -128,10 +128,10 @@ Querying of requests by slicing for categories or conditions and drilling down t
 3. Navigate to the request matrix view to query for a specific request.
 
 Example - Say that we are interested in Ad Hoc requests and want to get the incident reference numbers of the year (Request Type Volume Page). We would select Ad hoc from the navbar slicer, then get the query from the requests matrix. 
-![](adhocselection.png)
+![](adhocselection.PNG)
 
 If we are a manager, we may be interested in the assigned user, and if we are an operational user, we may be interested in the client’s name.
-![](inkedadhocadhocquery.png)
+![](Inkedadhocadhocquery.png)
 
 Exporting csv files produced by visuals for further analysis:
 1. Ensure that the data is loaded, refreshed.
@@ -140,7 +140,7 @@ Exporting csv files produced by visuals for further analysis:
 4. Export the csv file produced by the visual for the query.
 
 Example - Requests by category visual export
-![](exportcsv.png)
+![](exportcsv.PNG)
 
 Setting up dynamic refresh or embedding to web
 1. Publish the report to desired workspace.
