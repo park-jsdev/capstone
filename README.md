@@ -7,6 +7,8 @@ A Business intelligence dashboard on the Microsoft Power BI platform.
 ## Description
 As part of a departmental action within the ECCC Performance Management branch, there is a need to analyze data requests which are submitted and processed by the department, for the purpose of business intelligence. Its main purpose is executive reporting for the fiscal year, but has use cases for multiple levels of users. In this use case, the dashboard accurately aggregated the KPIs in a single page, and was able to demonstrate evidence for the benefit of automated work process for departmental productivity, and laid a groundwork for further studies for risk assessment. 
 
+[Full example](/main)
+
 The dashboard also covers the BI processes of:
 - Performance metrics and benchmarking.
 - Descriptive analytics
